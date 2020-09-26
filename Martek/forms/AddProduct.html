@@ -1,0 +1,33 @@
+<form method="post" action="index.php?pageID=manageProducts">
+<div class="form-group">
+<label for="ProductName">Product Name:</label>
+<input type="text" class="form-control" name="ProductName" required>
+
+<label for="Description">Description</label>
+<input type="text" class="form-control" name="Description" required>
+
+<label for="CategoryID">Category ID</label>
+
+<select name="CategoryID">
+    <option value=1>Phones</option>
+</select>
+
+
+
+<br>
+
+<label for="Price">Price</label>
+<input type="text" class="form-control" name="Price" required>
+
+<label for="UnitsInStock">Units in stock:</label>
+<input type="text" class="form-control" name="UnitsInStock" required>
+
+<label for="img">Product image:</label>
+ <input type="file" id="img" name="ProductImage" accept="image/*">
+
+
+</div>
+<button type="submit" class="btn btn-success" name="btnAdd">Add Product</button>
+
+</form>
+
