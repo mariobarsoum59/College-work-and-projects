@@ -1,0 +1,11 @@
+D:\College\MARIO\Year 2\semester 2\Application development\Project 50%\Project\Project\bin\Debug\Project.exe.config
+D:\College\MARIO\Year 2\semester 2\Application development\Project 50%\Project\Project\bin\Debug\Project.exe
+D:\College\MARIO\Year 2\semester 2\Application development\Project 50%\Project\Project\bin\Debug\Project.pdb
+D:\College\MARIO\Year 2\semester 2\Application development\Project 50%\Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
+D:\College\MARIO\Year 2\semester 2\Application development\Project 50%\Project\Project\obj\Debug\Project.lecturerForm.resources
+D:\College\MARIO\Year 2\semester 2\Application development\Project 50%\Project\Project\obj\Debug\Project.StartingPage.resources
+D:\College\MARIO\Year 2\semester 2\Application development\Project 50%\Project\Project\obj\Debug\Project.Properties.Resources.resources
+D:\College\MARIO\Year 2\semester 2\Application development\Project 50%\Project\Project\obj\Debug\Project.csproj.GenerateResource.cache
+D:\College\MARIO\Year 2\semester 2\Application development\Project 50%\Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+D:\College\MARIO\Year 2\semester 2\Application development\Project 50%\Project\Project\obj\Debug\Project.exe
+D:\College\MARIO\Year 2\semester 2\Application development\Project 50%\Project\Project\obj\Debug\Project.pdb
