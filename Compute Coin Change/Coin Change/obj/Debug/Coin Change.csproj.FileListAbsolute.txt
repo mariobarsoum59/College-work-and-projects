@@ -1,0 +1,10 @@
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 5\Coin Change\Coin Change\bin\Debug\Coin Change.exe.config
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 5\Coin Change\Coin Change\bin\Debug\Coin Change.exe
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 5\Coin Change\Coin Change\bin\Debug\Coin Change.pdb
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 5\Coin Change\Coin Change\obj\Debug\Coin Change.csprojAssemblyReference.cache
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 5\Coin Change\Coin Change\obj\Debug\Coin_Change.Form1.resources
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 5\Coin Change\Coin Change\obj\Debug\Coin_Change.Properties.Resources.resources
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 5\Coin Change\Coin Change\obj\Debug\Coin Change.csproj.GenerateResource.cache
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 5\Coin Change\Coin Change\obj\Debug\Coin Change.csproj.CoreCompileInputs.cache
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 5\Coin Change\Coin Change\obj\Debug\Coin Change.exe
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 5\Coin Change\Coin Change\obj\Debug\Coin Change.pdb
