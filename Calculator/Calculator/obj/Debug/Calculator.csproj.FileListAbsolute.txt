@@ -1,0 +1,10 @@
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 3\Calculator\Calculator\bin\Debug\Calculator.exe.config
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 3\Calculator\Calculator\bin\Debug\Calculator.exe
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 3\Calculator\Calculator\bin\Debug\Calculator.pdb
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 3\Calculator\Calculator\obj\Debug\Calculator.csprojAssemblyReference.cache
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 3\Calculator\Calculator\obj\Debug\Calculator.Form1.resources
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 3\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 3\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 3\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 3\Calculator\Calculator\obj\Debug\Calculator.exe
+U:\Software Development\Year 2\Semester 2\Application Development\Lab1 Liz 10%\Question 3\Calculator\Calculator\obj\Debug\Calculator.pdb
