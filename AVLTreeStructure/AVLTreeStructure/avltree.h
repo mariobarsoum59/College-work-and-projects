@@ -24,6 +24,11 @@ public:
 	void InsertItem(string item);
 	void inorder_print();	//LVR
 	void searchItem(string key, bool found);
+	void DeleteItem(string item);
+
+
+
+
 
 
 private:
@@ -37,6 +42,12 @@ private:
 	void RotateLeft(node*& tree);
 	void LeftBalance(node*& tree, bool& taller);
 	void search(node* leaf, string key, bool found);
+	void Delete(node*& tree, string item, bool& shorter);
+	void DeleteNode(node*& tree, bool& shorter);
+	void GetPredecessor(node* tree, string& data);
+	void DelRightBalance(node*& tree, bool& shorter);
+	void DelLeftBalance(node*& tree, bool& shorter);
+
 	node* root;
 
 };
@@ -307,4 +318,161 @@ void avltree::search(node* leaf, string key, bool found)
 		cout << "Found Item" << endl;
 	}
 
+}
+
+void avltree::DeleteItem(string item)
+// Calls recursive function Delete to delete item from tree.
+{
+	bool shorter;
+	Delete(root, item, shorter);
+}
+
+void avltree::Delete(node*& tree, string item, bool& shorter)
+{
+	if (tree != NULL)
+	{
+		if (item < tree->value)
+		{
+			Delete(tree->left, item, shorter);
+			// Look in left subtree.
+			if (shorter)
+				switch (tree->bf)
+				{
+				case LH: tree->bf = EH; break;
+				case EH: tree->bf = RH; shorter = false;
+					break;
+				case RH: DelRightBalance(tree, shorter);
+				} // END SWITCH	
+		}
+		else if (item > tree->value)
+		{
+			Delete(tree->right, item, shorter);
+			// Look in right subtree.
+			if (shorter)
+				switch (tree->bf)
+				{
+				case LH: DelLeftBalance(tree, shorter);
+				break;				case EH: tree->bf = LH; shorter = false; 							break;
+				case RH: tree->bf = EH; break;
+				} // END SWITCH
+		}
+		else
+			DeleteNode(tree, shorter);
+		// Node found; call DeleteNode.
+	} // END if (tree != NULL)
+	else
+	{
+		cout << "\nNOTE: " << item
+			<< " not in the tree so cannot be deleted.";
+	}
+}
+
+void avltree::DeleteNode(node*& tree, bool& shorter)
+// Delete the node pointed to by tree.
+// Post: The user's data in the node pointed to by tree is no longer in the tree. // If tree is a leaf node or has only one non-NULL child pointer, the node 
+// pointed to by tree is deleted; otherwise, the user's data is replaced by its
+// logical predecessor and the predecessor's node is deleted.
+{
+	string data;	
+	node* tempPtr;
+	tempPtr = tree;
+	if (tree->left == NULL)
+	{
+		tree = tree->right;
+		delete tempPtr;
+		shorter = true;
+	}
+	else if (tree->right == NULL)
+	{
+		tree = tree->left;
+		delete tempPtr;
+		shorter = true;
+	}
+	else
+	{
+		GetPredecessor(tree, data);
+		tree->value = data;
+		Delete(tree->left, data, shorter);
+		// Delete the predecessor node
+		if (shorter)
+			switch (tree->bf)
+			{
+			case LH: tree->bf = EH; break;
+			case EH: tree->bf = RH; shorter = false;
+				break;
+			case RH: DelRightBalance(tree, shorter);
+			}
+	}
+}
+
+
+void avltree::GetPredecessor(node* tree, string& data)
+// Sets data to the info member of the right-most node in tree.
+{
+	tree = tree->left;
+	while (tree->right != NULL)
+		tree = tree->right;
+	data = tree->value;
+}
+
+
+void avltree::DelRightBalance(node*& tree, bool& shorter)
+{
+	node* rs = tree->right;
+	node* ls;
+	switch (rs->bf)
+	{
+	case RH:	tree->bf = rs->bf = EH;
+		RotateLeft(tree);
+		shorter = true; break;
+	case EH:	tree->bf = RH;
+		rs->bf = LH;
+		RotateLeft(tree);
+		shorter = false; break;
+	case LH:	ls = rs->left;
+		switch (ls->bf)
+		{
+		case RH:	tree->bf = LH;
+			rs->bf = EH; break;
+		case EH:	tree->bf = rs->bf = EH;
+			break;
+		case LH:	tree->bf = EH;
+			rs->bf = RH; break;
+		} // END SWITCH
+
+		ls->bf = EH;
+		RotateRight(tree->right);
+		RotateLeft(tree);
+		shorter = true;
+	}
+}
+
+void avltree::DelLeftBalance(node*& tree, bool& shorter)
+{
+	node* ls = tree->left;
+	node* rs;
+	switch (ls->bf)
+	{
+	case LH:	tree->bf = ls->bf = EH;
+		RotateRight(tree);
+		shorter = true; break;
+	case EH:	tree->bf = LH;
+		ls->bf = RH;
+		RotateRight(tree);
+		shorter = false; break;
+	case RH:	rs = ls->right;
+		switch (rs->bf)
+		{
+		case LH:	tree->bf = RH;
+			ls->bf = EH; break;
+		case EH:	tree->bf = ls->bf = EH;
+			break;
+		case RH:	tree->bf = EH;
+			ls->bf = LH; break;
+		} // END SWITCH
+		rs->bf = EH;
+		RotateLeft(tree->left);
+		RotateRight(tree);
+		shorter = true;
+	}
 }
